@@ -94,6 +94,7 @@
 		00A345C5206818F600EF2BC9 = {
 			isa = PBXGroup;
 			children = (
+				00A345FF206820B200EF2BC9 /* README.md */,
 				00A345D0206818F600EF2BC9 /* ScanDocs */,
 				00A345E5206818F600EF2BC9 /* ScanDocsTests */,
 				00A345F0206818F600EF2BC9 /* ScanDocsUITests */,
@@ -117,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				00A345D1206818F600EF2BC9 /* AppDelegate.swift */,
-				00A345FF206820B200EF2BC9 /* README.md */,
 				00A345D3206818F600EF2BC9 /* ViewController.swift */,
 				00A345D5206818F600EF2BC9 /* Main.storyboard */,
 				00A345D8206818F600EF2BC9 /* Assets.xcassets */,
