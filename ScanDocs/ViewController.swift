@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable extension UITextView {
+@IBDesignable extension UITextView{
     
     @IBInspectable var borderWidth: CGFloat {
         set {
@@ -41,14 +41,18 @@ import UIKit
 }
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet var textView: UITextView!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
+    @IBAction func takePhotoBtnPressed(_ sender: Any) {
+    }
     
 
     
