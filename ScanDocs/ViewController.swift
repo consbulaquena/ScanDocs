@@ -52,20 +52,49 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
 
     @IBAction func takePhotoBtnPressed(_ sender: Any) {
-        view.endEditing(true) //hide keyboard
-        func presentOption()
+        view.endEditing(true)
+        presentOption()
     }
     
     //choose photo or camera
     func presentOption() {
         
-    }
+        let imageAction = UIAlertController(title: "Take Photo", message: nil, preferredStyle: .actionSheet)
+
     //image picker
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        <#code#>
+        let cameraAction = UIAlertAction(title: "Take Photo", style: .default) { (action) in
+            print("camera selected")
+            
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .camera
+            self.present(imagePicker, animated: true, completion: nil)
+            
+            
+        }
+        let libraryAction = UIAlertAction(title: "Choose existing", style: .default) { (action) in
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default) { (action) in
+        print("library")
+    }
+        
+        imageAction.addAction(cameraAction)
+        imageAction.addAction(libraryAction)
+        imageAction.addAction(cancelAction)
+        
+        present(imageAction, animated: true, completion: nil)
+        
+        
+        
     }
     
     
 }
-
+}
