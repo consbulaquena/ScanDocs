@@ -52,9 +52,19 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
 
     @IBAction func takePhotoBtnPressed(_ sender: Any) {
+        view.endEditing(true) //hide keyboard
+        func presentOption()
     }
     
-
+    //choose photo or camera
+    func presentOption() {
+        
+    }
+    //image picker
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        <#code#>
+    }
     
     
 }
