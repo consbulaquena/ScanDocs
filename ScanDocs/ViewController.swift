@@ -94,7 +94,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
 
         //imagePickerController(
-        func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
             if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
                 
                 //640 dimension, code run after scaled image
@@ -112,8 +112,16 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 }
     //recognize image to text - function
     func recognizeText(image: UIImage) {
-        if let tessaract = G8Tessaract() {
-        
+        if let tessaract = G8Tesseract(language: "eng") {
+        tessaract.engineMode = .tesseractCubeCombined
+        tessaract.pageSegmentationMode = .auto //for paragraphs
+        tessaract.image = image.g8_blackAndWhite() //turns to B/w
+        tessaract.recognize()
+        textView.text = tessaract.recognizedText
+            
+        }
+        activityIndicator.stopAnimating()
+        }
 }
 
 extension UIImage {

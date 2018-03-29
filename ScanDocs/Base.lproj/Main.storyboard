@@ -44,7 +44,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ai-bM-GK3">
                                 <rect key="frame" x="112" y="522" width="150" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="takephoto"/>
+                                <state key="normal" title="Button" image="takephotoBlue"/>
                                 <connections>
                                     <action selector="takePhotoBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YyY-qT-BhW"/>
                                 </connections>
@@ -68,6 +68,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="takephoto" width="452" height="296"/>
+        <image name="takephotoBlue" width="452" height="296"/>
     </resources>
 </document>

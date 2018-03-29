@@ -16,6 +16,7 @@
 		00A345F2206818F600EF2BC9 /* ScanDocsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A345F1206818F600EF2BC9 /* ScanDocsUITests.swift */; };
 		00A34600206820B200EF2BC9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 00A345FF206820B200EF2BC9 /* README.md */; };
 		00A346012068CF5900EF2BC9 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A346022068CF5900EF2BC9 /* TesseractOCR.framework */; };
+		00A34604206CC63000EF2BC9 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 00A34603206CC63000EF2BC9 /* tessdata */; };
 		629490645027FCBDA5E8FEE8 /* Pods_ScanDocsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE00803B5268B13D37D65336 /* Pods_ScanDocsUITests.framework */; };
 		7A7E28D2B21BAC9ACD34A8E6 /* Pods_ScanDocs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA84B4F5DBF44C92B1FE6785 /* Pods_ScanDocs.framework */; };
 		E030DF0BB5EE4C251D84FFC0 /* Pods_ScanDocsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72611E656B33EBC51F61D49 /* Pods_ScanDocsTests.framework */; };
@@ -54,6 +55,7 @@
 		00A345F3206818F600EF2BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00A345FF206820B200EF2BC9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		00A346022068CF5900EF2BC9 /* TesseractOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		00A34603206CC63000EF2BC9 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = ScanDocs/tessdata; sourceTree = "<group>"; };
 		0F79705E00CACE0CE3091E04 /* Pods-ScanDocsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScanDocsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScanDocsUITests/Pods-ScanDocsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E9CAB713B264A9155747114 /* Pods-ScanDocsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScanDocsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScanDocsTests/Pods-ScanDocsTests.release.xcconfig"; sourceTree = "<group>"; };
 		953A6CAE4A3574F85C949011 /* Pods-ScanDocsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScanDocsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScanDocsTests/Pods-ScanDocsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				00A345FF206820B200EF2BC9 /* README.md */,
 				00A345D0206818F600EF2BC9 /* ScanDocs */,
+				00A34603206CC63000EF2BC9 /* tessdata */,
 				00A345E5206818F600EF2BC9 /* ScanDocsTests */,
 				00A345F0206818F600EF2BC9 /* ScanDocsUITests */,
 				00A345CF206818F600EF2BC9 /* Products */,
@@ -290,6 +293,7 @@
 			files = (
 				00A345DC206818F600EF2BC9 /* LaunchScreen.storyboard in Resources */,
 				00A345D9206818F600EF2BC9 /* Assets.xcassets in Resources */,
+				00A34604206CC63000EF2BC9 /* tessdata in Resources */,
 				00A34600206820B200EF2BC9 /* README.md in Resources */,
 				00A345D7206818F600EF2BC9 /* Main.storyboard in Resources */,
 			);
