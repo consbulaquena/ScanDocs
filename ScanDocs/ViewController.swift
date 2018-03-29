@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TesseractOCR
 
 @IBDesignable extension UITextView{
     
@@ -63,7 +64,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 
     //image picker
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let cameraAction = UIAlertAction(title: "Take Photo", style: .default) { (action) in
             print("camera selected")
             
@@ -91,10 +91,49 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         
         present(imageAction, animated: true, completion: nil)
         
-        
-        
     }
-    
-    
+
+        //imagePickerController(
+        func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+            if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+                
+                //640 dimension, code run after scaled image
+                let scaledPhoto = selectedImage.scaleImage(640)
+                activityIndicator.startAnimating()
+                dismiss(animated: true, completion: {
+                    
+                    print("start recognizing image")
+                    self.recognizeText(image: scaledPhoto!)
+                })
+
+                
+        }
+       
 }
+    //recognize image to text - function
+    func recognizeText(image: UIImage) {
+        if let tessaract = G8Tessaract() {
+        
+}
+
+extension UIImage {
+    func scaleImage(_ maxDimension: CGFloat) -> UIImage? {
+        var scaledSize = CGSize(width: maxDimension, height: maxDimension)
+        if size.width > size.height {
+            let scaleFactor = size.height / size.width
+            scaledSize.height = scaledSize.width * scaleFactor
+            
+        } else { //For portrait
+        let scaleFactor = size.width / size.width
+            scaledSize.width = scaledSize.height * scaleFactor
+        
+    }   //draw in new image
+        UIGraphicsBeginImageContext(scaledSize)
+        draw(in: CGRect(origin: .zero, size: scaledSize))
+        
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return scaledImage
+    }
 }
