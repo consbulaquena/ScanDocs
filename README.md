@@ -6,7 +6,7 @@
 This app can scan text accurately from images on your device or scan text from photos taken immediately by the camera.
 
 
-![alt tag]()
+![alt tag](https://raw.githubusercontent.com/consbulaquena/ScanDocs/9645de376ca37796a11c8483482a4cf5e91ef508/ScanDocs/Assets.xcassets/scandocs-screen.imageset/scandocs-screen.gif)
 
 ### Features
 <ul><li>Convert an image to text</li>
